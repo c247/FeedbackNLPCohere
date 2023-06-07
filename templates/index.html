@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Feedback App</h1>
+        <form method="POST" action="/">
+            <label for="feedback">Enter your feedback:</label>
+            <input type="text" name="feedback" id="feedback" required>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        {% if user_input %}
+            <h3>Your Feedback:</h3>
+            <p>{{ user_input }}</p>
+        {% endif %}
+        {% if response %}
+            <h3>Response:</h3>
+            <p>{{ response }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
