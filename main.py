@@ -4,7 +4,7 @@ from cohere.responses.classify import Example
 
 co = cohere.Client('IgYIDVRHkDp4vev0qqqGIGpPONSupyW21XBQYqXN')
 
-# Define example inputs for sentiment analysis
+
 examples = [
     Example("The order came 5 days early", "positive"),
     Example("The item exceeded my expectations", "positive"),
